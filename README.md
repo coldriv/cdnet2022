@@ -1,5 +1,17 @@
 # cdnet2022
 Change Detection Neural Network [2022]
+![all](img/all.png)
+
+以下の三つのモデルの連携で河岸侵食を検知  
+- 既知の前景をYolov5（https://github.com/ultralytics/yolov5
+）で除去  
+- 変化を検出する教師なし変状検知モデル「cdnet」で変状箇所を検出  
+- Depth予測モデル（MiDaS；https://github.com/isl-org/MiDaS
+）で検知結果の大きさを評価  
+
+変状検知モデルはランダムに生成される合成画像で変状を自己学習する構成です。  
+
+![cdnet](img/cdnet.png)  
 
 ## チュートリアル
 レポジトリをクローンします。
